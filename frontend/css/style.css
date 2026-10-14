@@ -1,0 +1,41 @@
+/* Colores y ajustes propios de Biblioteca (se apoya en w3.css) */
+:root {
+    --lib-gold: #ffcc00;
+    --lib-dark: #121212;
+    --lib-grey: #242424;
+    --lib-border: #333;
+    --lib-muted: #a8a8a8;
+}
+
+body {
+    background-color: var(--lib-dark);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+td, th { background-color: var(--lib-grey); vertical-align: middle; }
+th { color: #000; background-color: var(--lib-gold); }
+
+.lib-card {
+    background-color: var(--lib-grey) !important;
+    border: 1px solid var(--lib-border);
+}
+
+.lib-muted { color: var(--lib-muted); }
+.lib-desc { display: block; margin-top: 2px; font-size: 13px; color: var(--lib-muted); max-width: 52ch; }
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--lib-gold);
+    outline-offset: 2px;
+}
+
+select option { background: #000; color: #fff; }
+input[type="file"] { color: #fff; }
+
+.w3-input::placeholder { color: #777; }
+
+/* Respeta a quien pidió menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}

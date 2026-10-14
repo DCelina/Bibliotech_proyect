@@ -1,0 +1,7 @@
+{
+  "email.invalid": "El email no tiene un formato válido.",
+  "password.weak": "La contraseña debe tener entre 8 y 72 caracteres, con al menos una mayúscula, una minúscula y un número.",
+  "username.invalid": "El usuario debe tener entre 3 y 30 caracteres: letras, números, punto, guion o guion bajo.",
+  "mime.notAllowed": "El tipo de archivo no está permitido.",
+  "file.signatureMismatch": "El contenido del archivo no coincide con su tipo."
+}

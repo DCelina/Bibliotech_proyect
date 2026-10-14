@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biblioteca - Mis materiales</title>
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23ffcc00%27/%3E%3Cpath d=%27M7 8h7a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H7zM25 8h-7a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h7z%27 fill=%27%23121212%27/%3E%3C/svg%3E">
+</head>
+<body>
+
+<nav class="w3-bar w3-black w3-border-bottom w3-border-dark-grey">
+    <a href="/library" class="w3-bar-item w3-text-yellow" style="text-decoration:none"><b>Biblioteca</b></a>
+    <a href="/library" class="w3-bar-item w3-button">Catálogo</a>
+    <button class="w3-bar-item w3-button w3-right btn-logout">Salir</button>
+</nav>
+
+<main class="w3-container w3-padding-32">
+    <div class="w3-row-padding">
+
+        <div class="w3-col l4 m5 s12">
+            <div class="w3-card-4 lib-card w3-padding w3-round">
+                <h3 class="w3-text-yellow">Subir material</h3>
+                <form id="uploadForm">
+                    <label for="title">Título</label>
+                    <input class="w3-input w3-border w3-round w3-transparent w3-text-white" type="text" id="title" maxlength="150" required>
+
+                    <label for="subject" class="w3-margin-top w3-show">Materia</label>
+                    <input class="w3-input w3-border w3-round w3-transparent w3-text-white" type="text" id="subject" maxlength="50" list="subjectOptions" required>
+                    <datalist id="subjectOptions"></datalist>
+
+                    <label for="description" class="w3-margin-top w3-show">Descripción (opcional)</label>
+                    <textarea class="w3-input w3-border w3-round w3-transparent w3-text-white" id="description" rows="3" maxlength="1000"></textarea>
+
+                    <label for="file" class="w3-margin-top w3-show">Archivo</label>
+                    <input class="w3-input w3-border w3-round" type="file" id="file"
+                           accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt,.png,.jpg,.jpeg" aria-describedby="fileHelp" required>
+                    <small id="fileHelp" class="lib-muted">PDF, Word, PowerPoint, Excel, texto o imagen. Hasta 20 MB.</small>
+
+                    <button type="submit" class="w3-button w3-yellow w3-block w3-round-large w3-margin-top"><b>Publicar material</b></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="w3-col l8 m7 s12">
+            <h3>Mis materiales</h3>
+            <div class="w3-responsive">
+                <table class="w3-table w3-striped w3-bordered lib-card">
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Materia</th>
+                            <th>Fecha</th>
+                            <th>Tamaño</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myMaterialsTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<script src="../js/services/apiService.js"></script>
+<script src="../js/components/uiHandlers.js"></script>
+<script src="../js/utils/authHelper.js"></script>
+<script src="../js/frontControllers/professorFrontController.js"></script>
+</body>
+</html>

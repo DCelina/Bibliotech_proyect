@@ -1,0 +1,7 @@
+{
+  "email.invalid": "The email format is not valid.",
+  "password.weak": "The password must be 8 to 72 characters long, with at least one uppercase letter, one lowercase letter and one number.",
+  "username.invalid": "The username must be 3 to 30 characters: letters, numbers, dot, hyphen or underscore.",
+  "mime.notAllowed": "This file type is not allowed.",
+  "file.signatureMismatch": "The file content does not match its type."
+}
